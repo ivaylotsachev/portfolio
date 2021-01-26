@@ -1,0 +1,48 @@
+.footer {
+  text-transform: uppercase;
+
+  h4 {
+    font-weight: 900;
+    font-size: 20px;
+    &:after {
+      content: '';
+      width: 10px;
+      height: 4px;
+      background: black;
+      display: inline-block;
+      margin: 0 15px 0 30px;
+    }
+  }
+
+  .footer-list-item {
+    font-weight: 600;
+    // padding: 0 20px;
+  }
+
+  .footer-list-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+    .footer-list-link,
+    &:after {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 100%;
+      font-weight: 900;
+    }
+
+    &:hover {
+      a {
+        transform: translateY(-100%);
+      }
+      &:after {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
