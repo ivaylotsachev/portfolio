@@ -1,4 +1,5 @@
 @import '~reset-css/reset.css';
+@import './common/variables.scss';
 @import './common/typo.scss';
 @import './common/grid.scss';
 @import './components/header.scss';
@@ -7,12 +8,19 @@
 @import './pages/about.scss';
 @import './common/footer.scss';
 
+$color-white: white;
+
 :root {
   --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+  --white: white;
 }
 
 * {
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html,
@@ -22,9 +30,15 @@ body {
 }
 
 body {
-  background-color: #fbf3f1;
+  // background-color: #fbf3f1;
+  background: black;
+  color: white;
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
+}
+
+main {
+  position: relative;
 }
 
 .pf-display {
@@ -41,7 +55,7 @@ main {
 }
 
 a {
-  color: black;
+  color: $color-white;
   display: inline-block;
 }
 
@@ -67,4 +81,12 @@ footer {
 .accent {
   font-weight: 900;
   font-size: 30px;
+}
+
+span[class*="char"] {
+  color: $color-white;
+  display: inline-block;
+  position: relative;
+  letter-spacing: -2vw;
+  text-shadow: -20px 10px 10px rgb(0 0 0 / 30%), 0 20px 50px rgb(0 0 0 / 30%);
 }

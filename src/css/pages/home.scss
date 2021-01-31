@@ -1,48 +1,59 @@
 .home-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
 
   section {
+    width: 100%;
     height: 100%;
-    width: 50%;
   }
 
-  .title {
+  .title-large,
+  .title-animated {
+    width: 100%;
+  }
+
+  .title-large {
     overflow: hidden;
+  }
+
+  .title-animated {
+    visibility: hidden;
   }
 
   .profile-image-wrapper {
+    position: absolute;
     overflow: hidden;
     right: 0;
     top: 0;
-    z-index: 0;
-    max-height: 70%;
-    height: 100%;
+    z-index: 10;
+    height: 60%;
+    width: 30%;
+    opacity: 0;
+    pointer-events: none;
   }
   .profile-image {
     width: 100%;
     height: 100%;
-    filter: grayscale(1);
     object-fit: cover;
     object-position: top;
-    transition: filter 0.3s ease-in-out;
-    &:hover {
-      filter: grayscale(0);
-    }
+    opacity: 0.8;
   }
 
   .additional-info-text {
     font-weight: 400;
     font-size: 1vw;
     text-transform: uppercase;
-    letter-spacing: 0.75vw;
+    letter-spacing: 0.7vw;
   }
 
   .job-title {
     font-weight: 900;
     font-size: 2.8vw;
-    margin-bottom: 10px;
+    margin: 30px 0 10px;
+  }
+
+  .spacer {
+    margin: 0 30px;
   }
 
   .animation-layer {
@@ -53,41 +64,42 @@
     left: 0;
     z-index: 10;
     pointer-events: none;
+
     .bg {
-      background: black;
+      background: white;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 0;
       color: black;
     }
+
     .title-wrapper {
+      width: 100%;
+      text-align: center;
       overflow: hidden;
+      position: relative;
+      z-index: 10;
+      mix-blend-mode: difference;
     }
-    .title-wrapper,
+
     .title-layer {
-      will-change: transform;
-    }
-    .title-layer {
-      color: white;
+      color: $color-white;
       position: relative;
       z-index: 1;
       font-size: 10vw;
       font-weight: 900;
       text-transform: uppercase;
       visibility: hidden;
-      &.small {
-        font-size: 2vw;
-        text-transform: uppercase;
-        font-weight: 100;
-        letter-spacing: 20px;
-      }
     }
   }
 }
 
+.title-wrapper,
+.title-layer,
 .title,
 .title-large,
-.text-animated {
+.text-animated,
+span {
   will-change: transform;
 }

@@ -9,7 +9,8 @@
     overflow: hidden;
   }
   .nav-link {
-    color: #161616;
+    display: inline-block;
+    color: white;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -31,7 +32,7 @@
     }
     &.is-active {
       span {
-        background-color: #161616;
+        background-color: $color-white;
         z-index: 1;
       }
     }

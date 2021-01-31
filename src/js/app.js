@@ -2,13 +2,12 @@ import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
 import barbaRouter from '@barba/router';
 import gsap from 'gsap';
-import {
-  homepageOnce,
-  homepageEnter,
-  homepageLeave,
-  aboutEnter,
-  aboutLeave,
-} from './animations';
+import views from './barba/views';
+import transitions from './barba/transitions'
+import { lettering } from './utils';
+
+lettering('intro-title-one', 'portfolio of', 'title-one');
+lettering('intro-title-two', 'a developer', 'title-two');
 
 const resetActiveLink = () =>
   gsap.set('.is-active span', {
@@ -30,33 +29,6 @@ barba.hooks.once((data) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-barba.init({
-  transitions: [
-    {
-      name: 'general',
-      leave() {
-        console.log('general leave');
-      },
-      enter() {
-        console.log('general enter');
-      },
-    },
-    {
-      name: 'home',
-      to: { namespace: 'home' },
-      once({ next }) {
-        resetActiveLink();
-        homepageOnce(next.container);
-        console.log('home once');
-      },
-      leave: ({ current }) => {
-        console.log('home page leave');
-        homepageLeave(current.container);
-      },
-      enter({ next }) {
-        console.log('home page enter');
-        homepageEnter(next.container);
-      },
-    },
-  ],
-});
+barba.hooks.beforeEnter(data => {})
+
+barba.init({ views, transitions });

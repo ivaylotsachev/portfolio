@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -5,13 +8,26 @@
   font-family: 'Bebas Neue', cursive;
 }
 
+.ff-noto {
+  font-family: 'Noto Serif', serif;
+}
+
+.ff-roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.title {
+  color: #161616;
+}
+
 .title-large {
-  @extend .ff-bebas;
-  // visibility: hidden;
-  font-size: 8vw;
+  display: inline-block;
+  font-size: 10vw;
   line-height: 10vw;
   font-weight: 900;
-  color: #161616;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 50px;
 }
 
 .title-medium {
