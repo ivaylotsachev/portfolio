@@ -21,18 +21,19 @@ const homeView = {
             const imageWrapperWidth = imageWrapper.getBoundingClientRect().left;
             const imageWrapperHeight = imageWrapper.getBoundingClientRect().top;
 
-            let x = (e.clientX - (imageWrapperWidth));
-            let y = (e.clientY - (imageWrapperHeight));
+            let x = (e.clientX - (imageWrapperWidth + 150));
+            let y = (e.clientY - (imageWrapperHeight + 150));
 
             const tl = gsap.timeline();
 
+            tl.to(images, 0.8, { x, y, stagger: 0.05, ease: 'power2.out' })
 
             if (e.target.className.includes('on-hover')) {
                 gsap.to(hide, 0.5, { opacity: 0.2 })
-                gsap.to(images, 0.8, { opacity: 1, x, y, stagger: 0.05, ease: 'power2.out' })
+                gsap.to(images, 0.4, { opacity: 0.8 })
             } else {
                 gsap.to(hide, 0.5, { opacity: 1 })
-                gsap.to(images, 0.4, { opacity: 0, x, y, stagger: 0.03, ease: 'power2.out' })
+                gsap.to(images, 0.4, { opacity: 0 })
             }
         })
     }
