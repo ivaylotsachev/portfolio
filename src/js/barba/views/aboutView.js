@@ -6,7 +6,10 @@ const aboutView = {
     beforeEnter() {
         console.log('about before enter');
         lettering('about-lettering', 'About', 'about-title')
-        gsap.set('.title-animated', { autoAlpha: 1})
+        gsap.set('.title-animated', { autoAlpha: 1 })
+    },
+    afterEnter() {
+
     }
 }
 

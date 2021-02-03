@@ -28,13 +28,13 @@
 
   .profile-image-wrapper {
     position: absolute;
-    overflow: hidden;
+    // overflow: hidden;
     right: 0;
     top: 0;
     z-index: 10;
-    height: 60%;
-    width: 30%;
-    opacity: 0;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
     pointer-events: none;
   }
   .profile-image {
@@ -42,7 +42,24 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    opacity: 0.8;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: opacity, transform, top, left;
+    z-index: 5;
+    &:nth-child(2) {
+      z-index: 3;
+      filter: grayscale(0.4);
+    }
+    &:nth-child(3) {
+      z-index: 2;
+      filter: grayscale(0.8);
+    }
+    &:last-child {
+      z-index: 1;
+      filter: grayscale(1);
+    }
   }
 
   .additional-info-text {

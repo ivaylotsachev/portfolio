@@ -15,26 +15,24 @@ const homeView = {
 
         const imageWrapper = document.querySelector('.profile-image-wrapper');
         const hide = document.querySelectorAll('.hide');
+        const images = document.querySelectorAll('img');
 
         document.addEventListener('mousemove', (e) => {
             const imageWrapperWidth = imageWrapper.getBoundingClientRect().left;
             const imageWrapperHeight = imageWrapper.getBoundingClientRect().top;
 
-            let x = (e.clientX - (imageWrapperWidth / 2));
+            let x = (e.clientX - (imageWrapperWidth));
             let y = (e.clientY - (imageWrapperHeight));
 
-            const tl = gsap.timeline({ paused: true });
+            const tl = gsap.timeline();
 
-            tl
-                .to(imageWrapper, 0.5, { autoAlpha: 1, top: y, left: x })
-                .to(hide, 0.5, { opacity: 0.1 }, 0);
 
             if (e.target.className.includes('on-hover')) {
                 gsap.to(hide, 0.5, { opacity: 0.2 })
-                gsap.to(imageWrapper, 0.5, { opacity: 1, top: y, left: x })
+                gsap.to(images, 0.8, { opacity: 1, x, y, stagger: 0.05, ease: 'power2.out' })
             } else {
                 gsap.to(hide, 0.5, { opacity: 1 })
-                gsap.to(imageWrapper, 0.5, { opacity: 0, top: y, left: x })
+                gsap.to(images, 0.4, { opacity: 0, x, y, stagger: 0.03, ease: 'power2.out' })
             }
         })
     }
