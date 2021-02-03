@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Tsachev - Home</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="assets/app.css" rel="stylesheet" />
   </head>
 
   <body data-barba="wrapper">
-    <div
-      class="wrapper home-wrapper"
-      data-barba="container"
-      data-barba-namespace="home"
-    >
+    <div class="wrapper home-wrapper" data-barba="container" data-barba-namespace="home" id="grain-container">
       <div class="animation-layer full-size flex flex-column flex-center">
         <div class="title-wrapper">
           <div class="title-layer intro-title-one"></div>
@@ -30,9 +24,7 @@
         <nav class="nav flex flex-center">
           <ul class="nav-list flex flex-center">
             <li class="nav-item">
-              <a href="index.html" class="nav-link is-active"
-                >home<span>&nbsp;</span></a
-              >
+              <a href="index.html" class="nav-link is-active">home<span>&nbsp;</span></a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">about</a>
@@ -44,7 +36,7 @@
         </nav>
       </header>
 
-      <main class="page-container flex flex-center">
+      <main class="page-container flex flex-center flex-column">
         <div class="profile-image-wrapper">
           <img class="profile-image" src="./images/profile.jpg" alt="" />
         </div>
@@ -62,42 +54,17 @@
               Based in Sofia Bulgaria
             </p>
           </div>
-
         </section>
+
+        <div class="mask hide">
+          <p class="txt-small text-animated">Welcome to my portfolio website, hope you had a great day. I believe you
+            are ready to start, please click the menu to travel around.
+          </p>
+        </div>
+
       </main>
     </div>
-
-    <footer class="footer flex flex-center hide">
-      <h4 class="flex flex-center">find me on</h4>
-      <nav class="footer-nav">
-        <ul class="footer-list flex flex-center">
-          <li class="footer-list-item flex flex-center" data-text="LinkedIn">
-            <a
-              href="https://www.linkedin.com/in/ivaylo-tsachev-92bb36a9/"
-              class="footer-list-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-          <li class="footer-list-item flex flex-center" data-text="Facebook">
-            <a
-              href="https://www.facebook.com/ivailotsachev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="footer-list-link"
-              >Facebook</a
-            >
-          </li>
-          <li class="footer-list-item flex flex-center" data-text="Gmail">
-            <a href="mailto:itsa4ev@gmail.com" class="footer-list-link"
-              >Gmail</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </footer>
-
     <script src="assets/app.js"></script>
   </body>
+
 </html>

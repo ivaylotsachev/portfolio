@@ -1,12 +1,12 @@
-@import '~reset-css/reset.css';
-@import './common/variables.scss';
-@import './common/typo.scss';
-@import './common/grid.scss';
-@import './components/header.scss';
-@import './pages/home.scss';
-@import './pages/works.scss';
-@import './pages/about.scss';
-@import './common/footer.scss';
+@import "~reset-css/reset.css";
+@import "./common/variables.scss";
+@import "./common/typo.scss";
+@import "./common/grid.scss";
+@import "./components/header.scss";
+@import "./pages/home.scss";
+@import "./pages/works.scss";
+@import "./pages/about.scss";
+@import "./common/footer.scss";
 
 $color-white: white;
 
@@ -27,13 +27,14 @@ html,
 body {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 body {
   // background-color: #fbf3f1;
   background: black;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
 
@@ -42,7 +43,7 @@ main {
 }
 
 .pf-display {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .full-size {
