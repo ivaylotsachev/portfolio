@@ -14,8 +14,8 @@ const aboutToHomeLeave = (container) => {
   tl
     .to(letteringChars, { yPercent: 110, stagger: 0.02 }, 0)
     .to(textAnimated, { yPercent: 110, stagger: 0.02 }, 0)
-    .to(imageWrapper, { yPercent: 100 }, 0.1)
-    .to(image, { yPercent: -100 }, 0.12)
+    .to(imageWrapper, { opacity: 0 }, 0.1)
+    // .to(image, { yPercent: -100 }, 0.12)
 
   return tl;
 };
