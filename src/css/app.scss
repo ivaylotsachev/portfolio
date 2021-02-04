@@ -1,5 +1,6 @@
 @import "~reset-css/reset.css";
 @import "./common/variables.scss";
+@import "./common/reset.scss";
 @import "./common/typo.scss";
 @import "./common/grid.scss";
 @import "./components/header.scss";
@@ -84,7 +85,7 @@ footer {
   font-size: 2vw;
 }
 
-span[class*="char"] {
+.title-animated .mask, span[class*="char"] {
   color: $color-white;
   display: inline-block;
   position: relative;

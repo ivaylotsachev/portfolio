@@ -3,6 +3,10 @@
   max-width: 80%;
   margin: 0 auto;
   height: 90vh;
+  &.works-container {
+    max-width: 100%;
+    height: 100%;
+  }
 }
 
 .flex {
@@ -23,6 +27,9 @@
   &.jcfs {
     justify-content: start;
   }
+  &.jcsb {
+    justify-content: space-between;
+  }
   &.aic {
     align-items: center;
   }
@@ -34,6 +41,14 @@
     .column {
       width: 100%;
       max-width: 45%;
+    }
+  }
+  &.three-columns {
+    justify-content: space-between;
+    .column {
+      width: 100%;
+      height: 100%;
+      max-width: 33.3333%;
     }
   }
 }

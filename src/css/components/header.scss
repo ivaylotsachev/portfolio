@@ -1,9 +1,13 @@
 .header {
   text-align: center;
   height: 10vh;
+  width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 100;
+  &.is-absolute {
+    position: absolute;
+  }
   .nav-item {
     margin: 10px 20px;
     overflow: hidden;

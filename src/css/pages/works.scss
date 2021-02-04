@@ -1,0 +1,50 @@
+.works-wrapper {
+    height: 100%;
+    .work-item {
+        position: relative;
+        overflow: hidden;
+
+        .titles {
+            padding: 0 1vw;
+        }
+
+        .counter,
+        .titles {
+            position: relative;
+            z-index: 1;
+        }
+
+        .counter {
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-top: 20px;
+        }
+    }
+
+    .work-image-wrapper {
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .work-image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.work-image-wrapper,
+.work-image,
+.counter,
+.work-item-title {
+    will-change: opacity, transform;
+}

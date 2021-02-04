@@ -15,7 +15,7 @@ const homeToAboutEnter = (container) => {
     .from(letteringChars, { yPercent: 110, stagger: 0.02}, 0)
     .from(textAnimated, { yPercent: 120, opacity: 0, stagger: 0.02}, 0)
     .from(imageWrapper, { xPercent: 110 }, 0.1)
-    .from(image, { xPercent: -110 }, 0.12)
+    .from(image, { xPercent: -110 }, 0.1)
 
   return tl;
 };

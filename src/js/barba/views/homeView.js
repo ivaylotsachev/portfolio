@@ -17,7 +17,7 @@ const homeView = {
         const hide = document.querySelectorAll('.hide');
         const images = document.querySelectorAll('img');
 
-        document.addEventListener('mousemove', (e) => {
+        const handleMouse = (e) => {
             const imageWrapperWidth = imageWrapper.getBoundingClientRect().left;
             const imageWrapperHeight = imageWrapper.getBoundingClientRect().top;
 
@@ -37,8 +37,10 @@ const homeView = {
                 gsap.to(hide, 0.5, { opacity: 1 })
                 gsap.to(images, 0.4, { opacity: 0 })
             }
-        })
-    }
+        }
+
+        document.addEventListener('mousemove', handleMouse);
+    },
 }
 
 export default homeView;
