@@ -81,13 +81,13 @@ footer {
 
 .accent {
   font-weight: 900;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 span[class*="char"] {
   color: $color-white;
   display: inline-block;
   position: relative;
-  letter-spacing: -2vw;
   text-shadow: -20px 10px 10px rgb(0 0 0 / 30%), 0 20px 50px rgb(0 0 0 / 30%);
+  letter-spacing: -1vw;
 }
